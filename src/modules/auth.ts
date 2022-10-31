@@ -39,7 +39,7 @@ export const protect = (req, res, next) => {
     req.user = user
     next()
   } catch (e) {
-    console.log(e)
+    console.error(e)
     res.status(401)
     res.json({ message: 'Not Valid token' })
     return
